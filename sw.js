@@ -1,6 +1,6 @@
 // Офлайн-кэш: сначала сеть (чтобы обновления приходили сразу), без сети — из кэша.
-const CACHE = 'p6m-v1';
-const SHELL = ['./', './index.html', './app.js', './style.css', './manifest.webmanifest', './icon-192.png'];
+const CACHE = 'p6m-v2';
+const SHELL = ['./', './index.html', './app.js', './style.css', './manifest.webmanifest', './icon-192.png', './fonts/inter-cyrillic-wght-normal.woff2', './fonts/inter-latin-wght-normal.woff2'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)));
   self.skipWaiting();
